@@ -1,0 +1,164 @@
+ 
+<div class="navbar navbar-default" style="background-color: white;height:90px">
+  <div class="container-fluid" style="background-color: white;height:90px">
+   
+    <div class="navbar-header" style="height:90px">
+      <a class="navbar-brand" style="background-color: white;"></a>
+    </div>
+
+    <div class="collapse navbar-collapse"  style="background-color: white;">
+      <ul class="nav navbar-nav">
+        <li>
+         <img src="/assets/hamburgericon.svg" style="
+         position: absolute;
+         top: 39px;
+         left: 51px;
+         width: 19px;
+         height: 13px;" margin-right="40px"
+         />
+        </li>
+         
+      </ul>
+      
+      <div class="navbar-header"  id="example"  style = "position:absolute;right:250px; top:30px;border-radius: 150px; height:50px;width:360px;  ">
+  
+        <ng-select  class="dd" id="example" name="countryList"
+        style="border-radius:550px ; background: grey 0% 0% no-repeat padding-box;opacity: 1;"
+        #MyNgSelect            
+        bindLabel="name"
+        placeholder="Select item"
+         
+        [searchable]="true" 
+        [clearable]="true"
+        [closeOnSelect]="true"
+        [(ngModel)]="selectedCountry"
+         (change)="selectCountry($event)"  required>
+          <ng-option value="Sweden"><img class="image" src="./assets/sweden flag.png" width="20px" height="20px"/>Sweden</ng-option>
+           
+          <ng-option value="United States"><img class="image" src="./assets/usa flag.png" width="20px" height="20px"/>United States</ng-option>
+          <ng-option value="Canada"><img class="image" src="./assets/canada flag.png" width="20px" height="20px"/>Canada</ng-option>
+          <ng-option value="France"><img class="image" src="./assets/france.png" width="20px" height="20px"/>France</ng-option>
+          <ng-option value="Italy"><img class="image" src="./assets/italy.png" width="20px" height="20px"/>Italy</ng-option>
+          <ng-option value="India"><img class="image" src="./assets/indian flag.png" width="20px" height="20px"/>India</ng-option>
+          <ng-option value="Switzerland"><img class="image" src="./assets/switzerland.png" width="20px" height="20px"/>Switzerland</ng-option>
+          <ng-option value="Russia"><img class="image" src="./assets/russian flag.png" width="20px" height="20px"/>Russia</ng-option>
+          <ng-option value="Australia"><img class="image" src="./assets/australia.png" width="20px" height="20px"/>Australia</ng-option>
+          <ng-option value="China"><img class="image" src="./assets/china.png" width="20px" height="20px"/>China</ng-option>
+        </ng-select>
+        
+       
+      </div>
+       
+     
+      <div class="navbar-header navbar-right" style="background-color: white;">
+          <ul class="nav navbar-nav">
+            <li>
+              <img src="/assets/homeicon.svg" style="top: 35px;
+              position:absolute;
+              left: -200px;
+              width: 19px;
+              height: 19px;"  />  
+            </li>
+             
+            <li>
+              <img src="/assets/feedbackicon.svg" style="top: 35px;
+              position: absolute;
+              left: -150px;
+              width: 24px;
+              height: 20px;"/>  
+            </li>
+            <li>
+              <span style="top: 29px;
+              position: absolute;
+              left: -100px;
+              width: 36px;
+              height: 36px;
+              background: #F5F5F5 0% 0% no-repeat padding-box;
+              opacity: 1; background-color: #F5F5F5;
+  border-radius: 50%;
+  display: inline-block;"></span>
+              <img src="/assets/profileicon.svg" style="
+              position: absolute;
+              top: 38px;
+              left:-90px;
+              width: 15px;
+              height: 18px;"   />  
+            </li>
+          </ul>
+        </div>
+    </div>
+  
+     <div style="background-color: #F5F5F5;padding: 50px;height:457px;width:1280px">
+       <div class="container" style="background-color: white;
+       ;border:1px solid #00000026; border-radius: 10px;height:370px;  ">
+    <div style="font-size: 20px;
+    font: normal normal bold 18px/26px Verdana;color: black; margin-left: 10px;text-align: left;margin-top: 20px;">
+     <b >Global Map</b> 
+      <img src="/assets/viewicon.svg" style="
+      position:absolute;
+      top: 167px;
+      left: 1187px;
+      width: 20px;
+      height: 14px;
+      background: #fff 0% 0% no-repeat padding-box;
+opacity: 1;"
+      />  
+    </div>
+     
+   
+ 
+
+ 
+ <div class="container" style="border:1px solid #00000026;margin-left:-16px;margin-top:10px; height:250px;">
+
+  <div id="chartdiv"   style="width: 980px; height: 250px;position:absolute; " ></div>
+  <div style="color: black;top: 210px;
+   
+  position: absolute;
+  top: 205px;
+left: 1063px;
+width: 165px;
+height: 235px;
+border: 1px solid #D8D8D8;
+ 
+opacity: 1; text-align: left; padding-left: 10px;">
+ <p style="text-align: left;
+ font: normal normal normal 18px/22px Verdana;
+ letter-spacing: 0px;
+ color: #363E48;
+ text-transform: uppercase;
+ position:absolute;top:5px
+ ">  {{selectedCountry}}</p>
+ <img src="./{{imageUrl}}" height="80" width="40" style="position:absolute;left:60px;top: 60px;">
+ <div style="margin-top: 150px;position:fixed;font:  10px/12px Verdana; position:absolute;top:20px">
+ <p  >Capital: <b>{{CountryCapital}}</b> </p>
+ <p  > Currency:<b>{{CountryCurrency}}</b>  </p>
+ 
+</div>
+   <div style=" position:absolute;
+   top: -1px;
+left: 128px;
+width: 35px;
+height: 38px;background: #004997 0% 0% no-repeat padding-box;
+opacity: 1;">
+<img src="./assets/dropicon.svg" 
+style="
+ position: relative;
+top: 6px;
+left: 16px;
+width: 10px;
+height: 8px; 
+ 
+ 
+opacity: 1;"/>
+</div>
+  </div>
+</div>
+  
+  <div style="color: black; margin-left: 20px;position: absolute;left: 100px; font: normal normal normal 12px/16px Verdana;margin-bottom: 50px;">
+    <img src="./assets/arrowicon.svg" height="50p" width="50px" class="paddding" >
+     See to view global map
+  </div>
+  
+</div>
+</div> 

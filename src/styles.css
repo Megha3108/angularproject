@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@ng-select/ng-select/themes/default.theme.css";
+body{
+    background-color:white;
+}
+.padding
+{
+ 
+padding: 10px ;
+position: absolute;
+top:15px;
+ 
+
+
+}
+.pading{
+  padding:10px;
+  margin-top: 15px;
+  margin-right: 10px;
+  
+ 
+}
+.paddding{
+    padding:10px
+}
+.image{
+    border-radius: 50%;
+     
+    margin-right: 10px;
+}
+ 
+.paing{
+    position:absolute;
+    right: 120px;
+    width: 40px; 
+    padding: 10px ; 
+    top:152px
+    
+}
+.dropdown{
+  position: absolute; 
+ /* top:0%; 
+  left:132px;
+width: 30px;
+height: 30px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 2px solid #FFFFFF;
+background-color: rgb(48, 48, 134);
+opacity: 1;*/
+
+}
+ 
